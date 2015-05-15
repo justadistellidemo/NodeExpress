@@ -2,7 +2,7 @@ var express = require('express');
 var app = express();
 
 app.get('/', function (req, res) {
-  res.send('Hello World, this is a sample Express app, showing a test of CodeShip!');
+  res.send('Hello World, this is a sample Express app, showing a test of CodeShip !');
 });
 
 var server = app.listen(3000, function () {
