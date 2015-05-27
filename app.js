@@ -12,8 +12,8 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({
   extended: true
 }));
-app.set('views', path.join(__dirname, 'views'));
 
+app.set('views', path.join(__dirname, 'views'));
 app.get('/', homeController.index, timeController.getDate);
 app.set('view engine', 'jade');
 
