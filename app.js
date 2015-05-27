@@ -2,17 +2,20 @@ var express = require('express');
 var app = express();
 var path = require('path');
 var bodyParser = require('body-parser');
+
+//Controllers
 var timeController = require('./controllers/time');
+var homeController = require('./controllers/home');
 
 app.use(express.static(__dirname + '/public'));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({
   extended: true
 }));
+app.set('views', path.join(__dirname, 'views'));
 
-app.get('/', function (req, res) {
-  res.sendFile(path.join(__dirname + '/index.html'));
-});
+app.get('/', homeController.index);
+app.set('view engine', 'jade');
 
 app.post('/catch', function(request, response) {
   var body = request.body;
@@ -22,5 +25,5 @@ app.post('/catch', function(request, response) {
 
 var server = app.listen(3000, function () {
   var port = server.address().port;
-  console.log('Magic is happening on port', port, " at " + timeController.getDate());
+  console.log('Magic is happening on port', port, " at ", timeController.getDate());
 });
