@@ -17,13 +17,13 @@ app.set('views', path.join(__dirname, 'views'));
 app.get('/', homeController.index, timeController.getDate);
 app.set('view engine', 'jade');
 
-app.post('/catch', function(request, response) {
+app.post('/catch', function(request, response){
   var body = request.body;
   console.log("Received: ", body);
   response.sendStatus(200)
 });
 
-var server = app.listen(3000, function () {
+var server = app.listen(3000, function (){
   var port = server.address().port;
   console.log('Magic is happening on port', port, " at ", timeController.getDate());
 });
