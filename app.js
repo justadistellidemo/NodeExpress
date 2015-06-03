@@ -20,7 +20,7 @@ app.set('view engine', 'jade');
 app.post('/catch', function(request, response){
   var body = request.body;
   console.log("Received: ", body);
-  response.sendStatus(200)
+  response.sendStatus(200);
 });
 
 var server = app.listen(3000, function (){
