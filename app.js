@@ -23,6 +23,12 @@ app.post('/catch', function(request, response){
   response.sendStatus(200);
 });
 
+app.use(function(req, res, next) {
+    var err = new Error('Not Found');
+    err.status = 404;
+    next(err);
+});
+
 var server = app.listen(3000, function (){
   var port = server.address().port;
   console.log('Magic is happening on port', port, " at ", timeController.getDate());
