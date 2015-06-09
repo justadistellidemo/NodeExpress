@@ -1,7 +1,7 @@
 {
   "name": "NodeExpress",
   "version": "1.0.0",
-  "description": "",
+  "description": "Simple Node and Express sample app.",
   "main": "app.js",
   "scripts": {
     "start": "node app.js"
