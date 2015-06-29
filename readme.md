@@ -6,6 +6,8 @@
 
 [![Build Status](https://travis-ci.org/alexleventer/NodeExpress.svg)](https://travis-ci.org/alexleventer/NodeExpress)
 
+[![Build Status](https://snap-ci.com/alexleventer/NodeExpress/branch/master/build_image)](https://snap-ci.com/alexleventer/NodeExpress/branch/master)
+
 Just a simple Node + Express app for testing that uses:
 
 1. Express: https://www.npmjs.com/package/express
