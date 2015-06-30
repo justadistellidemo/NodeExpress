@@ -1,4 +1,4 @@
-#Sample NodeExpress App
+#NodeExpress App
 
 [![wercker status](https://app.wercker.com/status/3c282e9a38aecbd3f88f6740a8369a38/m "wercker status")](https://app.wercker.com/project/bykey/3c282e9a38aecbd3f88f6740a8369a38)
 
