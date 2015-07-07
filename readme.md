@@ -8,6 +8,8 @@
 
 [![Build Status](https://snap-ci.com/alexleventer/NodeExpress/branch/master/build_image)](https://snap-ci.com/alexleventer/NodeExpress/branch/master)
 
+[![Build Status](https://semaphoreci.com/api/v1/projects/30aa8397-0dc1-45c3-aec8-42fb04c265af/476709/badge.svg)](https://semaphoreci.com/alexleventer/nodeexpress)
+
 Just a simple Node + Express app for testing that uses:
 
 1. Express: https://www.npmjs.com/package/express
