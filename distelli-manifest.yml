@@ -57,9 +57,9 @@ alex/NodeExpress:
 
   PreInstall:
     - echo "Begin PreInstall"
-    - nvm install 0.10.25
-    - nvm use 0.10.25
-    - npm install
+    - sudo apt-get install nodejs -y
+    - sudo apt-get install npm -y
+    - npm install -y
     ##########################################################
     # The PreInstall: Section occurs before Install
     #
