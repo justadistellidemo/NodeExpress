@@ -2,13 +2,10 @@ distelli/NodeExpress:
 
   Env:
     - REPO_TYPE: Git
-
   PkgInclude:
     - '*'
-
   PkgExclude:
     - node_modules/
-
   PreInstall:
     - echo "Begin PreInstall"
     - sudo apt-get install nodejs -y
