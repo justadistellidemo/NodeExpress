@@ -13,8 +13,6 @@ distelli/NodeExpress:
     - npm install -y
 
   PreRelease:
-    - nvm install 0.10.25
-    - nvm use 0.10.25
     - npm install
     - npm install grunt-cli
   PostInstall:
