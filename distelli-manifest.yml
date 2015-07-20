@@ -14,55 +14,14 @@ distelli/NodeExpress:
     - sudo apt-get install nodejs -y
     - sudo apt-get install npm -y
     - npm install -y
-    ##########################################################
-    # The PreInstall: Section occurs before Install
-    #
-    # This section is great for download or installing
-    #  prerequisites.
-    #
-    # Check to see if node is installed and install it if not
-    #- echo "PreInstall Starting."
-    # Check to see if node is already installed
-    #- if [ -a /usr/local/bin/node ]; then
-    #   It is already installed
-    #-   echo "node exists"
-    #- else
-    #   Install node from nodejs.org
-    #-   echo "node does not exist. Installing..."
-    #-   wget http://nodejs.org/dist/v0.12.2/node-v0.12.2-linux-x64.tar.gz
-    #-   sudo tar -C /usr/local --strip-components 1 -zxvf node-v0.12.2-linux-x6
-    #- fi
-    #
-    ##########################################################
+
+  PreRelease:
+    - nvm install 0.10.25
+    - nvm use 0.10.25
+    - npm install
+    - npm install grunt-cli
   PostInstall:
     - echo "Begin PostInstall"
-    ##########################################################
-    # The PostInstall: Section occurs after Install
-    #
-    # During the Install Distelli downloads and decompresses
-    #  the application. Which includes files indicated by
-    #  the PkgInclude: section.
-    # Now that the files are available you can interact
-    #  with them.
-    #
-    # Have NPM install module dependencies
-    #- npm install
-    #
-    ##########################################################
 
   Exec:
     - echo "Begin Exec"
-    ##########################################################
-    # The Exec: Section executes the application
-    #
-    # The Distelli Agent watches this process and ensures
-    #  that if it stops, it is restarted.
-    #
-    # Start a node application
-    #- node server.js
-    #
-    # You may want to use the distelli-manifest.yml
-    #  Start: section instead of Exec: if you are starting a
-    #  daemon or service.
-    #
-    ##########################################################
