@@ -55,15 +55,8 @@ altest3/NodeExpress:
     #
     ##########################################################
   PreInstall:
-    - echo "Begin PreInstall"
-    - if [ -a /usr/local/bin/node ]; then
-    - echo "node exists"
-    - else
-    #   Install node from nodejs.org
-    -   echo "node does not exist. Installing..."
-    -   wget http://nodejs.org/dist/v0.12.2/node-v0.12.2-linux-x64.tar.gz
-    -   sudo tar -C /usr/local --strip-components 1 -zxvf node-v0.12.2-linux-x64.tar.gz
-    - fi
+    - sudo apt-get install nodejs -y
+    - sudo apt-get install npm -y
     #
     ##########################################################
 
