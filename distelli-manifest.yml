@@ -1,4 +1,4 @@
-altest2/NodeExpress:
+altest3/NodeExpress:
   ############################################################
   # The Distelli Manifest Reference
   #    distelli-manifest.yml
@@ -54,7 +54,6 @@ altest2/NodeExpress:
     #  that should NOT be bundled for pushs and deploys
     #
     ##########################################################
-
   PreInstall:
     - echo "Begin PreInstall"
     ##########################################################
