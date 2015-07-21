@@ -74,7 +74,6 @@ altest2/NodeExpress:
     #-   echo "node does not exist. Installing..."
     #-   wget http://nodejs.org/dist/v0.12.2/node-v0.12.2-linux-x64.tar.gz
     #-   sudo tar -C /usr/local --strip-components 1 -zxvf node-v0.12.2-linux-x6
-4.tar.gz
     #- fi
     #
     ##########################################################
