@@ -95,17 +95,4 @@ altest3/NodeExpress:
 
   Exec:
     - echo "Begin Exec"
-    ##########################################################
-    # The Exec: Section executes the application
-    #
-    # The Distelli Agent watches this process and ensures
-    #  that if it stops, it is restarted.
-    #
-    # Start a node application
-    #- node server.js
-    #
-    # You may want to use the distelli-manifest.yml
-    #  Start: section instead of Exec: if you are starting a
-    #  daemon or service.
-    #
-    ##########################################################
+    - node app.js
