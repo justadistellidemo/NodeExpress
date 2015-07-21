@@ -56,29 +56,20 @@ altest3/NodeExpress:
     ##########################################################
   PreInstall:
     - echo "Begin PreInstall"
-    ##########################################################
-    # The PreInstall: Section occurs before Install
-    #
-    # This section is great for download or installing
-    #  prerequisites.
-    #
-    # Check to see if node is installed and install it if not
-    #- echo "PreInstall Starting."
-    # Check to see if node is already installed
-    #- if [ -a /usr/local/bin/node ]; then
-    #   It is already installed
-    #-   echo "node exists"
-    #- else
+    - if [ -a /usr/local/bin/node ]; then
+    - echo "node exists"
+    - else
     #   Install node from nodejs.org
-    #-   echo "node does not exist. Installing..."
-    #-   wget http://nodejs.org/dist/v0.12.2/node-v0.12.2-linux-x64.tar.gz
-    #-   sudo tar -C /usr/local --strip-components 1 -zxvf node-v0.12.2-linux-x6
-    #- fi
+    -   echo "node does not exist. Installing..."
+    -   wget http://nodejs.org/dist/v0.12.2/node-v0.12.2-linux-x64.tar.gz
+    -   sudo tar -C /usr/local --strip-components 1 -zxvf node-v0.12.2-linux-x6
+    - fi
     #
     ##########################################################
 
   PostInstall:
     - echo "Begin PostInstall"
+    - npm install
     ##########################################################
     # The PostInstall: Section occurs after Install
     #
