@@ -79,4 +79,4 @@ altest3/NodeExpress:
 
   Exec:
     - echo "Begin Exec"
-    - /usr/local/bin/node app.js
+    # - /usr/local/bin/node app.js
