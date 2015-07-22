@@ -79,5 +79,5 @@ altest4/testapp:
 
   Exec:
     - echo "Begin Exec"
-    - node app.js
+    - /usr/local/bin/node app.js
     # - /usr/local/bin/node app.js
