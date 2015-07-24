@@ -1,4 +1,4 @@
-altest11/Node:
+altest11/node:
   ############################################################
   # The Distelli Manifest Reference
   #    distelli-manifest.yml
@@ -14,7 +14,6 @@ altest11/Node:
   # USERNAME/APPLICATIONNAME:
   #
   ############################################################
-
   Env:
     - REPO_TYPE: Git
     ##########################################################
