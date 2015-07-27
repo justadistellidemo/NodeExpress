@@ -1,4 +1,4 @@
-altest15/NodeExpress:
+Distelli/NodeExpress:
   ############################################################
   # The Distelli Manifest Reference
   #    distelli-manifest.yml
@@ -59,6 +59,10 @@ altest15/NodeExpress:
     - sudo apt-get install npm -y
     #
     ##########################################################
+
+  PreRelease:
+    - npm install
+    - npm test
 
   PostInstall:
     - echo "Begin PostInstall"
