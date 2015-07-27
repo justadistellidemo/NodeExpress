@@ -59,7 +59,6 @@ distelli/NodeExpress:
     - sudo apt-get install npm -y
     #
     ##########################################################
-
   PreRelease:
     - npm install
     - npm test
