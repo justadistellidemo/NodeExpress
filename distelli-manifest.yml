@@ -1,5 +1,4 @@
 demo/test:
-
   #The PkgInclude is to identify files that must be included in the application deployment: http://distel.li/pkgincludesection
   PkgInclude:
     - '*'
