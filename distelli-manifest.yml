@@ -1,14 +1,4 @@
 demo/test:
-
-  #The below represents integration with the application repo: http://distel.li/commitdatasection
-  CommitData:
-    - RepoType: Git
-    - RepoPath: .
-
-  #The Env section is for defining environment variables: http://distel.li/envsection
-  Env:
-    - REPO_TYPE: Git
-
   #The PkgInclude is to identify files that must be included in the application deployment: http://distel.li/pkgincludesection
   PkgInclude:
     - '*'
