@@ -1,83 +1,38 @@
-Distelli/NodeExpress:
-  ############################################################
-  # The Distelli Manifest Reference
-  #    distelli-manifest.yml
-  #
-  # Read more about Distelli Manifests at:
-  #  http://www.distelli.com/docs/distelli-manifest-reference
-  #
-  # The first line must be your:
-  # distelli username (not email)
-  # application name
-  #
-  # as shown above:
-  # USERNAME/APPLICATIONNAME:
-  #
-  ############################################################
+demo/test:
+
+  #The below represents integration with the application repo: http://distel.li/commitdatasection
+  CommitData:
+    - RepoType: Git
+    - RepoPath: .
+
+  #The Env section is for defining environment variables: http://distel.li/envsection
   Env:
     - REPO_TYPE: Git
-    ##########################################################
-    # The Env: Section is where you define
-    #  your environment variables
-    # One variable REPO_TYPE has been defined above
-    #
-    # Read more about Distelli Environment Variables at:
-    #  https://www.distelli.com/docs/distelli-variables-reference
-    #
-    # You may need to define others. for example:
-    #- JAVA_HOME: /path/to/java/home/jre
-    #- CATALING_HOME: /path/to/tomcat
-    #- PORT: 8004
-    #
-    ##########################################################
 
+  #The PkgInclude is to identify files that must be included in the application deployment: http://distel.li/pkgincludesection
   PkgInclude:
     - '*'
-    ##########################################################
-    # The PkgInclude: Section is where you define
-    #  the files and directories in your application
-    #  that should be bundled for pushs and deploys
-    #
-    # The '*' will pick up all files and directories
-    #
-    # Example: Get the server.js file
-    #- 'server.js'
-    #
-    ##########################################################
 
   PkgExclude:
     - node_modules/
-    ##########################################################
-    # The PkgExclude: Section is where you define
-    #  the files and directories in your application
-    #  that should NOT be bundled for pushs and deploys
-    #
-    ##########################################################
+
+  #The PreRelease section is for specifying build and pre-packaging steps: http://distel.li/prereleasesection
+  PreRelease:
+    - npm install
+    - npm test
+
+  #The PreInstall section occurs before install: distel.li/preinstallsection
   PreInstall:
+    - echo "Begin PreInstall"
     - sudo apt-get update
     - sudo apt-get <in></in>stall nodejs -y
     - sudo apt-get install npm -y
-    ##########################################################
-  PreRelease:
-    - npm install
+
+  #The PostInstall section occurs after install: http://distel.li/postinstallsection
   PostInstall:
     - echo "Begin PostInstall"
-    - npm install
-    ##########################################################
-    # The PostInstall: Section occurs after Install
-    #
-    # During the Install Distelli downloads and decompresses
-    #  the application. Which includes files indicated by
-    #  the PkgInclude: section.
-    # Now that the files are available you can interact
-    #  with them.
-    #
-    # Have NPM install module dependencies
-    #- npm install
-    #
-    ##########################################################
 
+  #The Exec section executes and monitors the application: distel.li/execsection
   Exec:
     - echo "Begin Exec"
     - /usr/bin/nodejs app.js
-    # - /usr/local/bin/node app.js
