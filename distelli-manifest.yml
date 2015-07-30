@@ -11,7 +11,7 @@ demo/NodeExpress:
   PreInstall:
     - echo "Begin PreInstall"
     - sudo apt-get update
-    - sudo apt-get <in></in>stall nodejs -y
+    - sudo apt-get install nodejs -y
     - sudo apt-get install npm -y
 
   PostInstall:
