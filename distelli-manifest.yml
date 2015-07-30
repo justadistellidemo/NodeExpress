@@ -3,6 +3,7 @@ demo/NodeExpress:
   PkgInclude:
     - '*'
 
+  #Exclude these files
   PkgExclude:
     - node_modules/
 
