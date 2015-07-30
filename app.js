@@ -3,7 +3,6 @@ var app = express();
 var path = require('path');
 var bodyParser = require('body-parser');
 
-//Controllers
 var timeController = require('./controllers/time');
 var homeController = require('./controllers/home');
 
