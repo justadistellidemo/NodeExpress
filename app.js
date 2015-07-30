@@ -28,8 +28,6 @@ app.use(function(req, res, next) {
     next(err);
 });
 
-//Again a test
-
 var server = app.listen(3000, function (){
   var port = server.address().port;
   console.log('Magic is happening on port', port, " at ", timeController.getDate());

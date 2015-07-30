@@ -1,4 +1,4 @@
-altest26/NodeExpress:
+demo/NodeExpress:
   PkgInclude:
     - '*'
 
@@ -7,7 +7,6 @@ altest26/NodeExpress:
 
   PreRelease:
     - npm install
-    - npm test
 
   PreInstall:
     - echo "Begin PreInstall"
