@@ -1,4 +1,4 @@
-altest30/NodeExpress:
+demo/NodeExpress:
   PkgInclude:
     - '*'
 
