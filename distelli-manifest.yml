@@ -1,24 +1,36 @@
-altest33/NodeExpress:
+demo/NodeExpress:
+
+  #The below represents integration with the application repo: http://distel.li/commitdatasection
+  CommitData:
+    - RepoType: Git
+    - RepoPath: .
+
+  #The Env section is for defining environment variables: http://distel.li/envsection
+  Env:
+    - EXAMPLE: "This is an example variable"
+
+  #The PkgInclude is to identify files that must be included in the application deployment: http://distel.li/pkgincludesection
   PkgInclude:
     - '*'
 
-  PkgExclude:
-    - node_modules/
-
+  #The PreRelease section is for specifying build and pre-packaging steps: http://distel.li/prereleasesection
   PreRelease:
     - npm install
     - npm test
 
+  #The PreInstall section occurs before install: distel.li/preinstallsection
   PreInstall:
     - echo "Begin PreInstall"
     - sudo apt-get update
     - sudo apt-get install nodejs -y
     - sudo apt-get install npm -y
 
+  #The PostInstall section occurs after install: http://distel.li/postinstallsection
   PostInstall:
     - echo "Begin PostInstall"
     - npm install
 
+  #The Exec section executes and monitors the application: distel.li/execsection
   Exec:
     - echo "Begin Exec"
     - /usr/bin/nodejs app.js
