@@ -1,10 +1,5 @@
 demo/NodeExpress:
 
-  #The below represents integration with the application repo: http://distel.li/commitdatasection
-  CommitData:
-    - RepoType: Git
-    - RepoPath: .
-
   #The Env section is for defining environment variables: http://distel.li/envsection
   Env:
     - EXAMPLE: "This is an example variable"
