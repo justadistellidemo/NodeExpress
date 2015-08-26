@@ -25,7 +25,6 @@ demo/NodeExpress:
     - echo "Begin PostInstall"
     - npm install
 
-  #The Exec section executes and monitors the application: distel.li/execsection
   Exec:
     - echo "Begin Exec"
     - /usr/bin/nodejs app.js
