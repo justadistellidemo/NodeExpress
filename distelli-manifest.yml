@@ -1,8 +1,4 @@
-demo/NodeExpress:
-
-  #The Env section is for defining environment variables: http://distel.li/envsection
-  Env:
-    - EXAMPLE: "This is an example variable"
+altest90/testapp:
 
   #The PkgInclude is to identify files that must be included in the application deployment: http://distel.li/pkgincludesection
   PkgInclude:
@@ -10,21 +6,23 @@ demo/NodeExpress:
 
   #The PreRelease section is for specifying build and pre-packaging steps: http://distel.li/prereleasesection
   PreRelease:
+    - echo "Begin PreRelease"
     - npm install
-    - npm test
+    #- npm test
 
   #The PreInstall section occurs before install: distel.li/preinstallsection
   PreInstall:
     - echo "Begin PreInstall"
-    - sudo apt-get update
-    - sudo apt-get install nodejs -y
-    - sudo apt-get install npm -y
+    #- wget http://nodejs.org/dist/v0.12.2/node-v0.12.2-linux-x64.tar.gz
+    #- sudo tar -C /usr/local --strip-components 1 -zxvf node-v0.12.2-linux-x64.tar.gz
 
   #The PostInstall section occurs after install: http://distel.li/postinstallsection
   PostInstall:
     - echo "Begin PostInstall"
-    - npm install
+    #- npm install
 
+  #The Exec section executes and monitors the application: distel.li/execsection
   Exec:
-    - echo "Begin Exec"
-    - /usr/bin/nodejs app.js
+    - npm start
+
+
