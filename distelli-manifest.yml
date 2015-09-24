@@ -1,4 +1,8 @@
 kdehoop/NodeExpress:
+
+  Env:
+    - PORT: 3000
+    
   PkgInclude:
     - '**'
 
@@ -8,14 +12,22 @@ kdehoop/NodeExpress:
     #- npm test
 
   PreInstall:
-    - echo "Begin PreInstall"
-    - wget http://nodejs.org/dist/v0.12.2/node-v0.12.2-linux-x64.tar.gz
-    - sudo tar -C /usr/local --strip-components 1 -zxvf node-v0.12.2-linux-x64.tar.gz
+    - echo "---Begining PreInstall---"
+    - echo "--Installing deploy dependencies--"
+    
+    - echo "-Updating apt-get-"
+    - sudo apt-get -y update
+    - echo "-Installing nodejs-"
+    - sudo apt-get -y install nodejs
+    - echo "-Installing npm-"
+    - sudo apt-get -y install npm
+
 
   PostInstall:
     - echo "Begin PostInstall"
+    - npm install
 
   Exec:
-    - /usr/local/bin/npm start
+    - /usr/bin/nodejs app.js
 
 
