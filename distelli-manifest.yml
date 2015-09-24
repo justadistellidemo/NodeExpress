@@ -9,6 +9,7 @@ kdehoop/NodeExpress:
   PreRelease:
     - echo "Begin PreRelease"
     - npm install
+    - npm update
     #- npm test
 
   PreInstall:
