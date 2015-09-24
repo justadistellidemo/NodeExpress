@@ -5,6 +5,7 @@ var bodyParser = require('body-parser');
 
 var timeController = require('./controllers/time');
 var homeController = require('./controllers/home');
+var featureController = require('./controllers/feature');
 
 app.use(express.static(__dirname + '/public'));
 app.use(bodyParser.json());
@@ -14,6 +15,7 @@ app.use(bodyParser.urlencoded({
 
 app.set('views', path.join(__dirname, 'views'));
 app.get('/', homeController.index, timeController.getDate);
+app.get('/newfeature', featureController.index);
 app.set('view engine', 'jade');
 
 app.post('/catch', function(request, response){
