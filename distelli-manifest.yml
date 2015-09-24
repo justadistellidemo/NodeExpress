@@ -9,8 +9,8 @@ kdehoop/NodeExpress:
 
   PreInstall:
     - echo "Begin PreInstall"
-    #- wget http://nodejs.org/dist/v0.12.2/node-v0.12.2-linux-x64.tar.gz
-    #- sudo tar -C /usr/local --strip-components 1 -zxvf node-v0.12.2-linux-x64.tar.gz
+    - wget http://nodejs.org/dist/v0.12.2/node-v0.12.2-linux-x64.tar.gz
+    - sudo tar -C /usr/local --strip-components 1 -zxvf node-v0.12.2-linux-x64.tar.gz
 
   PostInstall:
     - echo "Begin PostInstall"
