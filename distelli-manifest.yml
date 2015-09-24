@@ -2,7 +2,7 @@ kdehoop/NodeExpress:
 
   Env:
     - PORT: 3000
-    
+
   PkgInclude:
     - '**'
 
@@ -14,7 +14,7 @@ kdehoop/NodeExpress:
   PreInstall:
     - echo "---Begining PreInstall---"
     - echo "--Installing deploy dependencies--"
-    
+
     - echo "-Updating apt-get-"
     - sudo apt-get -y update
     - echo "-Installing nodejs-"
@@ -26,6 +26,7 @@ kdehoop/NodeExpress:
   PostInstall:
     - echo "Begin PostInstall"
     - npm install
+    - npm update
 
   Exec:
     - /usr/bin/nodejs app.js
