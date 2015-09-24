@@ -5,6 +5,8 @@ kdehoop/NodeExpress:
 
   PkgInclude:
     - '**'
+  PkgExclude:
+    - 'node_modules/*'
 
   PreRelease:
     - echo "Begin PreRelease"
